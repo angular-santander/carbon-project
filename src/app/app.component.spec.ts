@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+// carbon-components-angular default imports
+import { UIShellModule, IconModule } from 'carbon-components-angular';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
