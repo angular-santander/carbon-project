@@ -9,13 +9,11 @@ import { ListarComponent } from './categorias/listar/listar.component';
 
 // carbon-components-angular default imports
 import { UIShellModule, IconModule } from 'carbon-components-angular';
-import {Notification20} from '@carbon/icons/es/notification/20';
-import {UserAvatar20} from '@carbon/icons/es/user--avatar/20';
 import { IncluirComponent } from './categorias/incluir/incluir.component';
 import { EditarComponent } from './categorias/editar/editar.component';
 import { ExcluirComponent } from './categorias/excluir/excluir.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 // import {AppSwitcher20} from '@carbon/icons/es/app-switcher/20';
-
 
 @NgModule({
   declarations: [
@@ -29,12 +27,9 @@ import { ExcluirComponent } from './categorias/excluir/excluir.component';
     ExcluirComponent,
   ],
 
-  imports: [
-    BrowserModule,
-    IconModule
-  ],
+  imports: [BrowserModule, IconModule, AppRoutingModule, UIShellModule],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
