@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/carbon-components/scss/globals/scss/styles.scss"
+              "node_modules/carbon-components/scss/globals/scss/styles.scss",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
