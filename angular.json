@@ -20,6 +20,7 @@
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/carbon-components/scss/globals/scss/styles.scss",
               "./node_modules/carbon-components/scss/globals/scss/styles.scss"
             ],
             "scripts": []
@@ -89,5 +90,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

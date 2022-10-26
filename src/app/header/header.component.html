@@ -1,2 +1,14 @@
-<p>header works!</p>
+<ibm-header name="[Projeto Angular]">
+    <ibm-hamburger (selected)="hasHamburger = !hasHamburger" class="bx--header__menu-toggle__hidden"></ibm-hamburger>
+    <ibm-header-navigation>
 
+        <ibm-header-item [route]="['dashboard']">Dashboard</ibm-header-item>
+
+        <ibm-header-item [route]="['listar']">Categorias</ibm-header-item>
+
+    </ibm-header-navigation>
+    <ibm-sidenav *ngIf="hasHamburger" class="bx--header__menu-toggle__hidden">
+        <ibm-header-item [route]="['dashboard']">Dashboard</ibm-header-item>
+        <ibm-header-item [route]="['listar']">Categorias</ibm-header-item>
+    </ibm-sidenav>
+</ibm-header>
