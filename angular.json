@@ -23,8 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/carbon-components/scss/globals/scss/styles.scss",
-              "src/styles.css"
+              "./node_modules/carbon-components/scss/globals/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -91,7 +90,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
