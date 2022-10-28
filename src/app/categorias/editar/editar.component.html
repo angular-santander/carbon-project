@@ -13,9 +13,15 @@
     </ibm-table-container>
     <br>
     <br>
+    <button 
+    [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
+        Cancelar
+        <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
+    </button>
+
 
     <button ibmButton="primary">
         Editar
-        <svg ibmIcon="edit" size="16" class="bx--btn__icon"></svg>
+        <svg ibmIcon="add" size="16" class="bx--btn__icon"></svg>
     </button>
 </div>

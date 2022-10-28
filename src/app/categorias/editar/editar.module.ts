@@ -6,7 +6,7 @@ import { BreadcrumbModule,
           TabsModule, 
           IconModule 
 } from 'carbon-components-angular';
-import { EditarCategoriaService } from './editar-categoria.service';
+import { EditarCategoriaService } from './editar.service';
 
 
 @NgModule({

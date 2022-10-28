@@ -19,6 +19,7 @@ import { IncluirComponent } from './categorias/incluir/incluir.component';
 import { EditarComponent } from './categorias/editar/editar.component';
 import { ExcluirComponent } from './categorias/excluir/excluir.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { EditarCategoriaService } from './categorias/editar/editar.service';
 
 // import {AppSwitcher20} from '@carbon/icons/es/app-switcher/20';
 @NgModule({
@@ -46,6 +47,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
   ],
 
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, EditarCategoriaService],
 })
 export class AppModule {}
