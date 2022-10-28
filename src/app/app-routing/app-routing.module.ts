@@ -11,7 +11,7 @@ const appRoutes: Routes = [
   { path: 'listar', component: ListarComponent },
   { path: 'incluir', component: IncluirComponent },
   { path: 'editar/:id', component: EditarComponent },
-  { path: 'excluir/id', component: ExcluirComponent },
+  { path: 'excluir', component: ExcluirComponent },
 ];
 
 @NgModule({
