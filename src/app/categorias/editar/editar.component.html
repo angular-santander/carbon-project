@@ -1,1 +1,27 @@
-<p>Aqui começa o editar categoria</p>
+<div class="spacing">
+    <ibm-table-container>
+        <ibm-table-header>
+            <h4 ibmTableHeaderTitle>{{title}}</h4>
+            <p ibmTableHeaderDescription>{{description}}</p>
+        </ibm-table-header>
+        <ibm-table [model]="tableModel" [size]="'md'" [showSelectionColumn]="true" [striped]="false" [skeleton]="false"
+            [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true">
+
+        </ibm-table>
+        <ibm-pagination [model]="tableModel" [disabled]="true" [skeleton]="false" (selectPage)="selectPage($event)">
+        </ibm-pagination>
+    </ibm-table-container>
+    <br>
+    <br>
+    <button 
+    [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
+        Cancelar
+        <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
+    </button>
+
+
+    <button ibmButton="primary">
+        Editar
+        <svg ibmIcon="add" size="16" class="bx--btn__icon"></svg>
+    </button>
+</div>

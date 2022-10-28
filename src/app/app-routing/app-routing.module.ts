@@ -5,11 +5,11 @@ import { ExcluirComponent } from '../categorias/excluir/excluir.component';
 import { IncluirComponent } from '../categorias/incluir/incluir.component';
 import { ListarComponent } from '../categorias/listar/listar.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'listar', component: ListarComponent },
   { path: 'incluir', component: IncluirComponent },
+  { path: 'editar', component: EditarComponent },
   { path: 'editar/:id', component: EditarComponent },
   { path: 'excluir', component: ExcluirComponent },
 ];
