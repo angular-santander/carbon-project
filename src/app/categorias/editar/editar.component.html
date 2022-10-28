@@ -1,1 +1,65 @@
-<p>editar</p>
+<div ibmGrid class="cds--grid--full-width landing-page">
+  <div ibmRow class="landing-page__banner">
+    <div ibmCol [columnNumbers]="{'lg': 16}">
+      <ibm-breadcrumb noTrailingSlash="true">
+        <ibm-breadcrumb-item href="/"> Home </ibm-breadcrumb-item>
+      </ibm-breadcrumb>
+      <h1 class="landing-page__heading">Categorias</h1>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div ibmRow class="landing-page__r2">
+  <div ibmCol class="cds--no-gutter">
+    <ibm-tabs>
+      <ibm-tab heading="ID">
+        <div ibmGrid class="cds--grid--no-gutter cds--grid--full-width">
+          <div ibmRow class="landing-page__tab-content">
+
+            <div ibmCol [columnNumbers]="{'md': 4, 'lg': 7}">ID 1</div>
+            <div
+              ibmCol
+              class="cds--offset-lg-1"
+              [columnNumbers]="{'md': 4, 'lg': 8}"
+            >
+            ID 2
+            </div>
+
+            <div
+            ibmCol
+            class="cds--offset-lg-1"
+            [columnNumbers]="{'md': 4, 'lg': 8}"
+          >
+           ID 3
+          </div>
+
+          </div>
+        </div>
+      </ibm-tab>
+      <ibm-tab heading="NOME">
+        <div ibmGrid class="cds--grid--no-gutter cds--grid--full-width">
+          <div ibmRow class="landing-page__tab-content">
+            <div ibmCol [columnNumbers]="{'lg': 16}">
+              Rapidly build beautiful and accessible experiences. The Carbon kit
+              contains all resources you need to get started.
+            </div>
+          </div>
+        </div>
+      </ibm-tab>
+      <ibm-tab heading="CATEGORIA">
+        <div ibmGrid class="cds--grid--no-gutter cds--grid--full-width">
+          <div ibmRow class="landing-page__tab-content">
+            <div ibmCol [columnNumbers]="{'lg': 16}">
+              Carbon provides styles and components in Vanilla, React, Angular,
+              and Vue for anyone building on the web.
+            </div>
+          </div>
+        </div>
+      </ibm-tab>
+    </ibm-tabs>
+  </div>
+</div>
+
+<ibm-breadcrumb noTrailingSlash="true" ariaLabel="Page navigation">
+  <ibm-tabs ariaLabel="Tab navigation">
