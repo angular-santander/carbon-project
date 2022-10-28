@@ -20,15 +20,6 @@ import { EditarComponent } from './categorias/editar/editar.component';
 import { ExcluirComponent } from './categorias/excluir/excluir.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 // import {AppSwitcher20} from '@carbon/icons/es/app-switcher/20';
-
-// Imports Editar Categoria 
-import {
-  BreadcrumbModule,
-  ButtonModule,
-  GridModule,
-  TabsModule,
-} from 'carbon-components-angular';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,4 +47,4 @@ import {
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
