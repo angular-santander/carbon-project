@@ -9,6 +9,7 @@ const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'listar', component: ListarComponent },
   { path: 'incluir', component: IncluirComponent },
+  { path: 'editar', component: EditarComponent },
   { path: 'editar/:id', component: EditarComponent },
   { path: 'excluir', component: ExcluirComponent },
 ];

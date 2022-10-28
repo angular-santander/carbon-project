@@ -1,2 +1,26 @@
-<p>listar works!</p>
-<app-editar></app-editar>
+<div class="spacing">
+  <ibm-table-container>
+      <ibm-table-header>
+          <h4 ibmTableHeaderTitle>{{title}}</h4>
+          <p ibmTableHeaderDescription>{{description}}</p>
+      </ibm-table-header>
+      <ibm-table [model]="tableModel" [size]="'md'" [showSelectionColumn]="true" [striped]="false" [skeleton]="false"
+          [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true">
+
+      </ibm-table>
+      <ibm-pagination [model]="tableModel" [disabled]="true" [skeleton]="false" (selectPage)="selectPage($event)">
+      </ibm-pagination>
+  </ibm-table-container>
+  <br>
+  <br>
+  <button class="btn"  [routerLink]="['../excluir']" ibmButton="primary">
+      Excluir
+      <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
+  </button>
+
+  <button [routerLink]="['../editar']" ibmButton="primary">
+    Editar
+    <svg ibmIcon="edit" size="16" class="bx--btn__icon"></svg>
+</button>
+
+</div>

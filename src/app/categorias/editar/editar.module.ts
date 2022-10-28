@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BreadcrumbModule, GridModule, ButtonModule, TabsModule } from 'carbon-components-angular';
+import { BreadcrumbModule, 
+          GridModule, 
+          ButtonModule, 
+          TabsModule, 
+          IconModule 
+} from 'carbon-components-angular';
+import { EditarCategoriaService } from './editar-categoria.service';
 
 
 @NgModule({
@@ -8,7 +14,12 @@ import { BreadcrumbModule, GridModule, ButtonModule, TabsModule } from 'carbon-c
   imports: [
     CommonModule,
     GridModule,
-    BreadcrumbModule
-  ]
+    BreadcrumbModule,
+    ButtonModule,
+    TabsModule, 
+    IconModule
+    
+  ],
+  providers: [EditarCategoriaService]
 })
 export class EditarModule { }
