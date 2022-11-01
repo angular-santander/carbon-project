@@ -5,7 +5,8 @@
             <p ibmTableHeaderDescription>{{description}}</p>
         </ibm-table-header>
         <ibm-table [model]="tableModel" [size]="'md'" [showSelectionColumn]="true" [striped]="false" [skeleton]="false"
-            [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true">
+            [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true" enableSingleSelect="true"
+            (selectRow)="onSelected($event)">
 
         </ibm-table>
         <ibm-pagination [model]="tableModel" [disabled]="true" [skeleton]="false" (selectPage)="selectPage($event)">
@@ -13,13 +14,12 @@
     </ibm-table-container>
     <br>
     <br>
-    <button 
-    [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
+    <button [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
         Cancelar
         <svg ibmIcon="edit" size="16" class="bx--btn__icon"></svg>
     </button>
-    
-    <button ibmButton="primary">
+
+    <button ibmButton="primary" (click)="onDelete()">
         Excluir
         <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
     </button>
