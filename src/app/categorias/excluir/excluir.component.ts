@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, ChildActivationStart } from '@angular/router';
 import {
   TableModel,
   TableHeaderItem,
   TableItem,
 } from 'carbon-components-angular';
+import { ExcluirCategoriaService } from './excluir-categoria.service';
 
 @Component({
   selector: 'app-excluir',
@@ -12,7 +14,9 @@ import {
 })
 export class ExcluirComponent implements OnInit {
   title = 'Você está vendo todas as categorias';
-  description = 'Selecione quais você quer excluir';
+  description = 'Selecione qual você quer excluir';
+  linhaSelecionada: number;
+  id;
 
   tableModel = new TableModel();
   tableData = [
@@ -24,7 +28,7 @@ export class ExcluirComponent implements OnInit {
     [new TableItem({ data: '006' }), new TableItem({ data: 'Categoria 6' })],
   ];
 
-  constructor() {}
+  constructor(private excluirCategoriaService: ExcluirCategoriaService) {}
 
   ngOnInit() {
     this.tableModel.data = [];
@@ -32,7 +36,7 @@ export class ExcluirComponent implements OnInit {
       new TableHeaderItem({ data: 'Id' }),
       new TableHeaderItem({ data: 'Nome da Categoria' }),
     ];
-    this.tableModel.pageLength = 2;
+    this.tableModel.pageLength = 10;
     this.tableModel.currentPage = 1;
     this.tableModel.totalDataLength = this.tableData.length;
     this.selectPage(1);
@@ -48,6 +52,21 @@ export class ExcluirComponent implements OnInit {
     ) {
       fullPage.push(this.tableData[0 + i]);
       this.tableModel.data = fullPage;
+    }
+  }
+
+  onSelected(val) {
+    this.linhaSelecionada = val.selectedRowIndex;
+  }
+
+  onDelete() {
+    this.id = this.tableModel.data[this.linhaSelecionada][0].data;
+    if (this.linhaSelecionada != null) {
+      this.excluirCategoriaService.deleteCategoria(this.id);
+      alert('Categoria excluida');
+      //por enquanto isso não vai funcionar porque a requisição http não está levando para lugar nenhum
+    } else {
+      alert('Nenhuma categoria selecionada!');
     }
   }
 }
