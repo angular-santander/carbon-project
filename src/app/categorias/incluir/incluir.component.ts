@@ -11,8 +11,8 @@ export class IncluirComponent implements OnInit {
   
   constructor() { }
   
-  title = 'Você está vendo todas as categorias';
-  description = 'Adicione um novo item';
+  title = 'Adicione um novo item';
+  description = 'insira o nome abaixo';
 
   tableModel = new TableModel();
   tableData = [
