@@ -14,7 +14,7 @@ import {
 
 export class ListarComponent implements OnInit {
   title = 'Você está vendo todas as categorias';
-  description = 'Selecione quais você quer excluir';
+  description = 'Selecione quais você quer modificar';
 
   tableModel = new TableModel();
   tableData = [

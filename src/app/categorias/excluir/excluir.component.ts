@@ -36,7 +36,7 @@ export class ExcluirComponent implements OnInit {
       new TableHeaderItem({ data: 'Id' }),
       new TableHeaderItem({ data: 'Nome da Categoria' }),
     ];
-    this.tableModel.pageLength = 10;
+    this.tableModel.pageLength = 2;
     this.tableModel.currentPage = 1;
     this.tableModel.totalDataLength = this.tableData.length;
     this.selectPage(1);

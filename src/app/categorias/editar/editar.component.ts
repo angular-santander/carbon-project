@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { TableHeaderItem, TableItem, TableModel } from 'carbon-components-angular';
 
-
 @Component({
   selector: 'app-editar',
   templateUrl: './editar.component.html',
   styleUrls: ['./editar.component.scss']
 })
+
 export class EditarComponent implements OnInit {
+  constructor() { }
+
   title = 'Você está vendo todas as categorias';
   description = 'Selecione quais você quer editar';
 
@@ -20,8 +22,6 @@ export class EditarComponent implements OnInit {
     [new TableItem({ data: '005' }), new TableItem({ data: 'Categoria 5' })],
     [new TableItem({ data: '006' }), new TableItem({ data: 'Categoria 6' })],
   ];
-
-  constructor() {}
 
   ngOnInit() {
     this.tableModel.data = [];
@@ -47,4 +47,5 @@ export class EditarComponent implements OnInit {
       this.tableModel.data = fullPage;
     }
   }
+
 }
