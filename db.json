@@ -1,36 +1,20 @@
-
 {
-
   "categorias": [
     {
       "id": 1,
-      "checkbox": true,
-      "nome": "Categoria1"
+      "nome": "Giselle"
     },
     {
       "id": 2,
-      "checkbox": true,
-      "nome": "Categoria2"
+      "nome": "Tiago"
     },
     {
       "id": 3,
-      "checkbox": true,
-      "nome": "Categoria3"
+      "nome": "Yago"
     },
     {
       "id": 4,
-      "checkbox": true,
-      "nome": "Categoria4"
-    },
-    {
-      "id": 5,
-      "checkbox": true,
-      "nome": "Categoria5"
-    },
-    {
-      "id": 6,
-      "checkbox": true,
-      "nome": "Categoria6"
+      "nome": "Marcos"
     }
   ]
 }
