@@ -6,6 +6,7 @@ import { IncluirComponent } from '../categorias/incluir/incluir.component';
 import { ListarComponent } from '../categorias/listar/listar.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 const appRoutes: Routes = [
+  { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'listar', component: ListarComponent },
   { path: 'incluir', component: IncluirComponent },
