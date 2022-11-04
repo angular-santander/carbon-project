@@ -7,12 +7,10 @@ import { BreadcrumbModule,
           IconModule 
 } from 'carbon-components-angular';
 import { EditarCategoriaService } from './editar.service';
-import { EditarSelecionadoComponent } from './editar-selecionado/editar-selecionado.component';
 
 
 @NgModule({
   declarations: [
-    EditarSelecionadoComponent
   ],
   imports: [
     CommonModule,

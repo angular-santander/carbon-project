@@ -4,23 +4,32 @@
             <h4 ibmTableHeaderTitle>{{title}}</h4>
             <p ibmTableHeaderDescription>{{description}}</p>
         </ibm-table-header>
-        <ibm-table [model]="tableModel" [size]="'md'" [showSelectionColumn]="true" [striped]="false" [skeleton]="false"
-            [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true">
-
-        </ibm-table>
-        <ibm-pagination [model]="tableModel" [disabled]="true" [skeleton]="false" (selectPage)="selectPage($event)">
-        </ibm-pagination>
+      <br><br>
+  
+      <ibm-label> 
+        <p>ID</p>
+      </ibm-label> 
+        <input disabled ibmText>
+  
+        <br> <br>
+  
+        <ibm-label> 
+          <p>Insira o nome</p>
+        </ibm-label> 
+          <input ibmText>
+          
     </ibm-table-container>
     <br>
     <br>
-    <button [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
-        Cancelar
-        <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
-    </button>
-
-
-    <button ibmButton="primary">
-        Editar
-        <svg ibmIcon="edit" size="16"  class="bx--btn__icon"></svg>
-    </button>
-</div>
+   
+    <button  class="btn" [routerLink]="['../listar']" ibmButton="secondary">
+      cancelar
+      <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
+  </button>
+    
+  <button ibmButton="primary">
+      Salvar
+      <svg ibmIcon="save" size="16" class="bx--btn__icon"></svg>
+  </button>
+  
+  </div>

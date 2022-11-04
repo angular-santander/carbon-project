@@ -24,6 +24,7 @@ import { EditarCategoriaService } from './categorias/editar/editar.service';
 
 import { IconService } from 'carbon-components-angular';
 import Edit16 from '@carbon/icons/es/edit/16'
+import { EditarModule } from './categorias/editar/editar.module';
 
 @NgModule({
   declarations: [
@@ -48,14 +49,15 @@ import Edit16 from '@carbon/icons/es/edit/16'
     FormsModule,
     PaginationModule,
     HttpClientModule,
-    IconModule
+    IconModule,
+    EditarModule
   ],
 
   providers: [],
   bootstrap: [AppComponent, EditarCategoriaService],
 })
 export class AppModule {
-  constructor( private iconService: IconService) {
+  constructor(private iconService: IconService) {
     this.iconService.registerAll([Edit16])
   }
 }
