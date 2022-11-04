@@ -22,7 +22,9 @@ import { ExcluirComponent } from './categorias/excluir/excluir.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { EditarCategoriaService } from './categorias/editar/editar.service';
 
-// import {AppSwitcher20} from '@carbon/icons/es/app-switcher/20';
+import { IconService } from 'carbon-components-angular';
+import Edit16 from '@carbon/icons/es/edit/16'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +48,14 @@ import { EditarCategoriaService } from './categorias/editar/editar.service';
     FormsModule,
     PaginationModule,
     HttpClientModule,
+    IconModule
   ],
 
   providers: [],
   bootstrap: [AppComponent, EditarCategoriaService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor( private iconService: IconService) {
+    this.iconService.registerAll([Edit16])
+  }
+}
