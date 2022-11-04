@@ -6,30 +6,30 @@
       </ibm-table-header>
     <br><br>
 
-    <ibm-label> 
+    <!-- <ibm-label> 
       <p>ID</p>
     </ibm-label> 
-      <input disabled ibmText>
+      <input disabled ibmText />
 
-      <br> <br>
+      <br> <br> -->
 
       <ibm-label> 
-        <p>Insira o nome</p>
+        <p>Nome da Categoria: </p>
       </ibm-label> 
-        <input ibmText>
+        <input ibmText id="nova-categoria" #nomeCategoria />
 		
   </ibm-table-container>
   <br>
   <br>
  
   <button  class="btn" [routerLink]="['../listar']" ibmButton="secondary">
-    cancelar
+    Cancelar
     <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
 </button>
 
 
-<button ibmButton="primary">
-    Salvar
+<button ibmButton="primary" (click)="add(nomeCategoria.value); nomeCategoria.value=''">
+    Adicionar
     <svg ibmIcon="save" size="16" class="bx--btn__icon"></svg>
 </button>
 
