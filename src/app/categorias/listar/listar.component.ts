@@ -5,16 +5,14 @@ import {
   TableItem,
 } from 'carbon-components-angular';
 
-
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
-  styleUrls: ['./listar.component.scss']
+  styleUrls: ['./listar.component.scss'],
 })
-
 export class ListarComponent implements OnInit {
   title = 'Você está vendo todas as categorias';
-  description = 'Selecione quais você quer modificar';
+  description = 'Escolha uma opção';
 
   tableModel = new TableModel();
   tableData = [
@@ -34,7 +32,7 @@ export class ListarComponent implements OnInit {
       new TableHeaderItem({ data: 'Id' }),
       new TableHeaderItem({ data: 'Nome da Categoria' }),
     ];
-    this.tableModel.pageLength = 2;
+    this.tableModel.pageLength = 10;
     this.tableModel.currentPage = 1;
     this.tableModel.totalDataLength = this.tableData.length;
     this.selectPage(1);
