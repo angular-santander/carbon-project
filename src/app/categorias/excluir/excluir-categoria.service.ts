@@ -11,15 +11,17 @@ export class ExcluirCategoriaService {
   constructor(private http: HttpClient) {}
 
   deleteCategoria(id: number) {
-    this.http.delete('https://localhost:4200/excluir/' + id).subscribe({
-      next: (data) => {
-        this.status = 'Excluido com sucesso';
-        alert(this.status);
-      },
-      error: (error) => {
-        this.errorMessage = error.message;
-        console.error('Aconteceu um erro!', error);
-      },
-    });
+    this.http
+      .delete('https://carbon-project.herokuapp.com/categorias/' + id)
+      .subscribe({
+        next: (data) => {
+          this.status = 'Excluido com sucesso';
+          alert(this.status);
+        },
+        error: (error) => {
+          this.errorMessage = error.message;
+          console.error('Aconteceu um erro!', error);
+        },
+      });
   }
 }
