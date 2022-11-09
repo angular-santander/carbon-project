@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseUsers } from './user.model';
+import { ResponseUsers } from '../categoria.model';
 import { UserService } from './user.service';
 
 
@@ -13,6 +13,7 @@ export class EditarComponent implements OnInit {
 
 
   responseUsers: ResponseUsers
+  user: any;
 
   constructor(private userService: UserService) { }
 
@@ -21,12 +22,12 @@ export class EditarComponent implements OnInit {
 
   ngOnInit() {
     return this.userService.getUsers()
-    .subscribe(res => this.responseUsers = res)
+      .subscribe(res => this.responseUsers = res)
   }
 
- 
-    
- 
+
+
+
 
 
 }
