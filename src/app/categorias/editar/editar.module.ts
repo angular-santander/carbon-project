@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BreadcrumbModule, 
-          GridModule, 
-          ButtonModule, 
-          TabsModule, 
-          IconModule 
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './user.service';
+import {
+  BreadcrumbModule,
+  GridModule,
+  ButtonModule,
+  TabsModule,
+  IconModule
 } from 'carbon-components-angular';
-import { EditarCategoriaService } from './editar.service';
-
 
 @NgModule({
   declarations: [
@@ -17,10 +18,13 @@ import { EditarCategoriaService } from './editar.service';
     GridModule,
     BreadcrumbModule,
     ButtonModule,
-    TabsModule, 
-    IconModule
+    TabsModule,
+    IconModule,
+    HttpClientModule,
     
+
+
   ],
-  providers: [EditarCategoriaService]
+  providers: [UserService]
 })
 export class EditarModule { }
