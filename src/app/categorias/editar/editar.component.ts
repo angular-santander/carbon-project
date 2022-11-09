@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseUsers } from '../categoria.model';
-import { UserService } from './user.service';
-
+import { CategoriaService } from 'src/app/categoria.service';
+import { Categoria } from '../categoria.model';
 
 @Component({
   selector: 'app-editar',
@@ -12,17 +11,17 @@ import { UserService } from './user.service';
 export class EditarComponent implements OnInit {
 
 
-  responseUsers: ResponseUsers
+  categoria: Categoria
   user: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private categoriaService: CategoriaService) { }
 
   title = 'Você está vendo todas as categorias';
   description = 'Selecione quais você quer editar';
 
   ngOnInit() {
-    return this.userService.getUsers()
-      .subscribe(res => this.responseUsers = res)
+    return this.categoriaService.getUsers()
+      .subscribe(res => this.categoria = res)
   }
 
 

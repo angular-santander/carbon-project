@@ -28,6 +28,11 @@ export class CategoriaService {
     );
   }
 
+  
+  getUsers(): Observable<Categoria> {
+    return this.http.get<Categoria>(this.categoriasUrl)
+
+  }
       /**
    * Handle Http operation that failed.
    * Let the app continue.
