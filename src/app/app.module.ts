@@ -23,7 +23,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { IconService } from 'carbon-components-angular';
 import Edit16 from '@carbon/icons/es/edit/16'
-import { UserService } from './categorias/editar/user.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +50,7 @@ import { UserService } from './categorias/editar/user.service';
     IconModule,
   ],
 
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {

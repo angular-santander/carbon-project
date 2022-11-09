@@ -10,9 +10,10 @@ import { Categoria } from '../categoria.model';
 
 export class EditarComponent implements OnInit {
 
+ nomeDaCategoria: any /* Declarei ela aqui mas nao sei se era mesmo preciso, talves seja isso */
 
   categoria: Categoria
-  user: any;
+
 
   constructor(private categoriaService: CategoriaService) { }
 
@@ -20,11 +21,19 @@ export class EditarComponent implements OnInit {
   description = 'Selecione quais você quer editar';
 
   ngOnInit() {
-    return this.categoriaService.getUsers()
-      .subscribe(res => this.categoria = res)
+
   }
 
+  save(): void {
+    if (this.categoria) {
+      this.categoriaService.updateCategoria(this.categoria)
+      .subscribe(() => this.goBack());
 
+    }
+  }
+  goBack(): void {
+    throw new Error('Method not implemented.');
+  }
 
 
 
