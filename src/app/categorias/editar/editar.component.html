@@ -1,26 +1,42 @@
 <div class="spacing">
-    <ibm-table-container>
-        <ibm-table-header>
-            <h4 ibmTableHeaderTitle>{{title}}</h4>
-            <p ibmTableHeaderDescription>{{description}}</p>
-        </ibm-table-header>
-        <ibm-table [model]="tableModel" [size]="'md'" [showSelectionColumn]="true" [striped]="false" [skeleton]="false"
-            [isDataGrid]="false" [sortAscendingLabel]="true" [sortDescendingLabel]="true">
+  <ibm-table-container>
+    <ibm-table-header>
+      <h4 ibmTableHeaderTitle>{{title}}</h4>
+      <p ibmTableHeaderDescription>{{description}}</p>
+    </ibm-table-header>
+    <br><br>
 
-        </ibm-table>
-        <ibm-pagination [model]="tableModel" [disabled]="true" [skeleton]="false" (selectPage)="selectPage($event)">
-        </ibm-pagination>
-    </ibm-table-container>
-    <br>
-    <br>
-    <button [routerLink]="['../listar']" class="btn-cancel" ibmButton="secondary">
-        Cancelar
-        <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
-    </button>
+    <ibm-label>
+      <p>ID</p>
+    </ibm-label>
+    <input ibmText *ngFor="let user of responseUsers" ngModel="{{ user.id }}" disabled>
 
+    <br> <br>
 
-    <button ibmButton="primary">
-        Editar
-        <svg ibmIcon="edit" size="16"  class="bx--btn__icon"></svg>
-    </button>
+    <ibm-label>
+      <p>Nome da Categoria</p>
+      <ibm-label>
+        Altere o nome da categoria abaixo
+      </ibm-label>
+    </ibm-label>
+
+    <input ibmText *ngFor="let user of responseUsers" ngModel="{{ user.nome }}"> 
+      
+    <br><br>
+
+  </ibm-table-container>
+
+  <br>
+  <br>
+
+  <button class="btn" [routerLink]="['../listar']" ibmButton="secondary">
+    cancelar
+    <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
+  </button>
+
+  <button ibmButton="primary">
+    Salvar
+    <svg ibmIcon="save" size="16" class="bx--btn__icon"></svg>
+  </button>
+
 </div>

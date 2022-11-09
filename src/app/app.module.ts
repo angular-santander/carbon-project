@@ -20,10 +20,11 @@ import { IncluirComponent } from './categorias/incluir/incluir.component';
 import { EditarComponent } from './categorias/editar/editar.component';
 import { ExcluirComponent } from './categorias/excluir/excluir.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { EditarCategoriaService } from './categorias/editar/editar.service';
 
 import { IconService } from 'carbon-components-angular';
 import Edit16 from '@carbon/icons/es/edit/16'
+import { EditarModule } from './categorias/editar/editar.module';
+import { UserService } from './categorias/editar/user.service';
 
 @NgModule({
   declarations: [
@@ -48,14 +49,15 @@ import Edit16 from '@carbon/icons/es/edit/16'
     FormsModule,
     PaginationModule,
     HttpClientModule,
-    IconModule
+    IconModule,
+    EditarModule
   ],
 
-  providers: [],
-  bootstrap: [AppComponent, EditarCategoriaService],
+  providers: [UserService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor( private iconService: IconService) {
+  constructor(private iconService: IconService) {
     this.iconService.registerAll([Edit16])
   }
 }
