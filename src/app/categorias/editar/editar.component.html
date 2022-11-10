@@ -9,30 +9,24 @@
     <ibm-label>
       <p>ID</p>
     </ibm-label>
-    <input ibmText *ngFor="let user of categoria" ngModel="{{ user.id }}" disabled>
-
-    <br> <br>
+    <input ibmText [(ngModel)]="categoria.id" disabled>
+    <br><br>
 
     <ibm-label>
       <p>Nome da Categoria</p>
-      <ibm-label>
-        Altere o nome da categoria abaixo
-      </ibm-label>
     </ibm-label>
-    <input ibmText ngModel #nomeCategoria/>
-   <br><br>
 
+    <input ibmText [(ngModel)]="categoria.nome"/>
+    <br><br>
   </ibm-table-container>
+  <br><br>
 
-  <br>
-  <br>
-
-  <button class="btn" [routerLink]="['../listar']" (click)="goBack()" ibmButton="secondary">
+  <button class="btn" [routerLink]="['../listar']" ibmButton="secondary">
     cancelar
     <svg ibmIcon="delete" size="16" class="bx--btn__icon"></svg>
   </button>
 
-  <button ibmButton="primary"(click)="save()"> <!-- Deixei sem passar a variavel local para parar de dar o erro -->
+  <button ibmButton="primary" (click)="save()">
     Salvar
     <svg ibmIcon="save" size="16" class="bx--btn__icon"></svg>
   </button>

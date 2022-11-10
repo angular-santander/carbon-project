@@ -18,9 +18,15 @@ export class CategoriaService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(
-    private http: HttpClient,
-  ) { }
+  constructor(private http: HttpClient) { }
+
+  getCategoria(id: number): Observable<Categoria> {
+    const url = `${this.categoriasUrl}/${id}`;
+    console.log("Get Categoria", id);
+    return this.http.get<Categoria>(url).pipe(
+      catchError(this.handleError<Categoria>(`getCategoria id=${id}`)),
+    );
+  }
 
   addCategoria(categoria: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>(this.categoriasUrl, categoria, this.httpOptions).pipe(
@@ -29,14 +35,10 @@ export class CategoriaService {
   }
 
   updateCategoria(categoria: Categoria): Observable<any> {
-    return this.http.put(this.categoriasUrl, categoria, this.httpOptions).pipe(
+    const url = `${this.categoriasUrl}/${categoria.id}`;
+    return this.http.put(url, categoria, this.httpOptions).pipe(
       catchError(this.handleError<any>('updateCategoria'))
     );
-  }
-
-  
-  log(arg0: string): void {
-    throw new Error('Method not implemented.');
   }
   /**
 * Handle Http operation that failed.
